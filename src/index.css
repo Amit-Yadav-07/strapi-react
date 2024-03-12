@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-parent {
+  background: #6366f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  color: #fff;
+}
+
+.nav-center {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+  .nav-parent {
+    justify-content: space-around;
+  }
+}
+
+.toggle-icon {
+  font-size: 1.3rem;
+  background: #fff;
+  color: black;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: transparent;
+}
+
+.close-btn {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: transparent;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+  background: #6366f1;
+  color: #fff;
+}
+
+.toggle-icon:hover {
+  transform: scale(1.03);
+}
+
+@media screen and (min-width: 992px) {
+  .toggle-icon {
+    display: none;
+  }
+
+  .links-section {
+    display: block;
+  }
+}
+
+/* hero css */
+
+.hero-container {
+  min-height: calc(100vh - 4rem);
+  height: auto;
+  background: #6366f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 90vw;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.3rem;
+}
+
+.content p {
+  width: 75%;
+  margin: 0px auto;
+  font-size: 1.3rem;
+  color: #fff;
+  margin-top: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+@media screen and (min-width: 992px) {
+  .content {
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 4rem;
+  }
+}
+
+/* aside css */
+
+.aside {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show-aside {
+  visibility: visible;
+  opacity: 1;
+  transition: 1s;
+}
+
+.sidebar-container {
+  padding: 2rem;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 5%;
+  top: 3%;
+}
+
+.sidebar-links {
+  margin-bottom: 2rem;
+}
+
+.sidebar-links h5 {
+  margin: 2rem 0px;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.sidebar-sublinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.3rem;
+}
+
+.sidebar-sublinks a {
+  font-size: 1.5rem;
+  display: block;
+  color: rgb(59, 58, 58);
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-links button {
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  text-transform: capitalize;
+  margin: 0px 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .aside {
+    display: none;
+  }
+
+  .nav-center {
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+
+  .nav-links {
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* sublinks */
+
+.submenu {
+  position: absolute;
+  width: 80vw;
+  left: 10%;
+  top: 15%;
+  background-color: whitesmoke;
+  padding: 2rem;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.submenu h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  text-align: left;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+}
+
+.links {
+  align-self: stretch;
+}
+.show-submenu {
+  visibility: visible;
+  opacity: 1;
+  z-index: 10;
+}
+
+@media screen and (min-width: 992px) {
+  .submenu {
+    display: block;
+  }
+}
+
+.submenu-links {
+  display: grid;
+}
+
+.submenu-links a {
+  display: block;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+  color: rgb(64, 62, 62);
+}
